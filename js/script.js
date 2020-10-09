@@ -42,6 +42,7 @@ function start() { // Inicio da função start()
 	
     movefundo();
     movejogador();
+    moveamigo();
     moveinimigo1();
     moveinimigo2();
 	
@@ -86,6 +87,19 @@ function start() { // Inicio da função start()
 
     } // fim da função movejogador()
 
+    function moveamigo() {
+	
+        posicaoX = parseInt($("#amigo").css("left"));
+        $("#amigo").css("left",posicaoX+1);
+                    
+            if (posicaoX>906) {
+                
+            $("#amigo").css("left",0);
+                        
+            }
+    
+    } // fim da função moveamigo()
+
     function moveinimigo1() {
 
         posicaoX = parseInt($("#inimigo1").css("left"));
@@ -109,7 +123,7 @@ function start() { // Inicio da função start()
 		$("#inimigo2").css("left",775);
 					
 		}
-} // Fim da função moveinimigo2()
+    } // Fim da função moveinimigo2()
     
 
 
